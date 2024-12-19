@@ -1,0 +1,229 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	margin: 0;
+	font-family: Geogrotesque-Regular,'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #fff;
+}
+
+h1, h2 {
+	font-family: Geogrotesque-Bold,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-family: Geogrotesque-SemiBold,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-family: Geogrotesque-Medium,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	text-transform: uppercase;
+}
+
+#canvas {
+/*	margin: 25% auto 0;*/
+	width: 1024px;
+	height: 192px;
+	z-index: 1;
+	position: relative;
+	mask-image: url('https://i.imgur.com/GA8bmPn.png');
+	mask-size: 1024px 192px;
+	
+}
+
+#mask {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+#company-logo {
+	position: sticky;
+	float: right;
+	right: 0px;
+	bottom: 0px;
+}
+
+#sportsyear-logo-container {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	transform: skewX(15deg, 0);
+	z-index: 100;
+	background-color:#165b5b;
+	width: 190px;
+	height: 25px;
+}
+
+.coogee-logo {
+	position: absolute;
+	margin: auto;
+	width: 250px;
+	height: 125px;
+	margin: 2.1em 24.2em;
+}
+
+.outro-container {
+	position: absolute;
+	/* margin: 2.1em 24.2em; */
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	width: 100%;
+	height: 100%;
+	z-index: 40;
+
+	.coogee-logo2 {
+		position: relative;
+		margin-block: auto;
+		margin-inline: 9rem;
+		width: 250px;
+		height: 125px;
+	}
+
+	.sportsyear {
+		position: relative;
+		margin-block: auto;
+		margin-inline-start: 0;
+		width: 400px;
+		height: 50px;
+		clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+	}
+}
+
+/* .coogee-logo2 {
+	position: absolute;
+	margin: auto;
+	width: 250px;
+	height: 125px;
+	margin: 2.1em 24.2em;
+} */
+
+.title-container {
+	position: absolute;
+	/* vertical-align: middle; */
+	width: 550px;
+	margin: 0em 14em;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	z-index: 15;
+
+	.subtitle {
+		display: inline-block;
+		margin-block-start: 0.7em;
+		margin-block-end: 0;
+		height: 25%;
+		text-align: center;
+		z-index: 3;
+		opacity: 0;
+	}
+	
+	.title{
+		display: inline-block;
+		margin-block-start: 0;
+		height: 25%;
+		text-align: center;
+		z-index: 3;
+	}
+}
+
+
+.time-container {
+	position: absolute;
+	vertical-align: middle;
+	margin: 2.5em 14em;
+	height: 7rem;
+	width: 55%;
+	text-align: center;
+	z-index: 17;
+	clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+
+	.time-val {
+		margin-block: 0.2em;
+		font-size: 4em !important;
+	}
+}
+
+.team1-logo {
+	position: absolute;
+	float: left;
+	top: 10px;
+	left: 10px;
+	width: 170px;
+	height: 170px;
+	border-radius: 15px;
+	z-index: 0;
+	opacity: 0;
+}
+
+.team2-logo {
+	position: absolute;
+	float: right;
+	top: 10px;
+	right: 10px;
+	width: 170px;
+	height: 170px;
+	border-radius: 15px;
+	z-index: 0;
+	opacity: 0;
+}
+
+.team1-logo2 {
+	position: absolute;
+	float: left;
+	top: 10px;
+	left: 10px;
+	width: 170px;
+	height: 170px;
+	border-radius: 15px;
+	z-index: 5;
+	opacity: 0;
+}
+
+.team2-logo2 {
+	position: absolute;
+	float: right;
+	top: 10px;
+	right: 10px;
+	width: 170px;
+	height: 170px;
+	border-radius: 15px;
+	z-index: 5;
+	opacity: 0;
+}
+
+.intro-text {
+	position: absolute;
+	margin-block: 0.35em;
+	font-size: 6rem;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 20;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+
+.upcoming-text {
+	position: absolute;
+	margin-block: 0.35em;
+	font-size: 6rem;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 21;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
